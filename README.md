@@ -36,7 +36,10 @@ php artisan vendor:publish --provider="AmyLashley\TrafficLogger\TrafficLoggerSer
 ```
 
 Migrate the database.
-You can change the database table that the logger users by update the table-name variable in the trafficlog.php config file. 
+You can change the database table that the logger users by update the table-name variable in the trafficlog.php config file.
+```
+php artisan migrate
+``` 
 
 ## Usage
 
@@ -44,6 +47,8 @@ You can change the database table that the logger users by update the table-name
 $skeleton = new League\Skeleton();
 echo $skeleton->echoPhrase('Hello, League!');
 ```
+
+You can view your traffic reports at /admin/traffic-logger/report
 
 ## Change log
 

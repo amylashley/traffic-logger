@@ -19,8 +19,7 @@ class TrafficLoggerServiceProvider extends ServiceProvider
     	// use this if your package has lang files
     	//$this->loadTranslationsFrom(__DIR__.'/resources/lang', 'skeleton');
     	
-    	// use this if your package has routes
-    	//$this->setupRoutes($this->app->router);
+    	$this->loadRoutesFrom(__DIR__.'/routes/web.php');
     	
     	$this->publishes([
     				__DIR__ . '/config/config.php' => config_path('trafficlog.php'),
