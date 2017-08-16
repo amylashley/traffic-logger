@@ -1,0 +1,50 @@
+{
+    "name": "AmyLashley/TrafficLogger",
+    "type": "library",
+    "description": ":package_description",
+    "keywords": [
+        "AmyLashley",
+        "TrafficLogger"
+    ],
+    "homepage": "https://github.com/AmyLashley/TrafficLogger",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": ":Amy Lashley",
+            "email": ":alashley@amherst.edu"
+        }
+    ],
+    "require": {
+        "illuminate/cache": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*",
+    	"illuminate/config": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*",
+    	"illuminate/filesystem": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*",
+    	"illuminate/support": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*",
+        "php" : "~5.6|~7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : ">=5.4.3",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "AmyLashley\\TrafficLogger\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AmyLashley\\TrafficLogger\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AmyLashley\\TrafficLogger\\TrafficLoggerServiceProvider"
+            ]
+        }
+    }
+}
