@@ -26,6 +26,9 @@ class TrafficLoggerServiceProvider extends ServiceProvider
     				__DIR__ . '/config/config.php' => config_path('trafficlog.php'),
     		]);
     	
+    	$this->publishes([
+    			__DIR__ . '/migrations' => $this->app->databasePath() . '/migrations'
+    	], 'migrations');
     }
 
     /**

@@ -7,9 +7,8 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-**Note:** Replace ```:author_name``` ```:author_username``` ```:author_website``` ```:author_email``` ```:vendor``` ```:package_name``` ```:package_description``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line. You can run `$ php prefill.php` in the command line to make all replacements at once. Delete the file prefill.php as well.
-
-Laravel package that will log certain traffic data to a MySQL database.
+Laravel package that will log certain traffic data to a MySQL database. This package relies on the Eloquent ORM which 
+is included with Laravel.
 
 ## Structure
 
@@ -31,6 +30,13 @@ Via Composer
 ``` bash
 $ composer require :vendor/:package_name
 ```
+Publish config and migration to your app:
+```
+php artisan vendor:publish --provider="AmyLashley\TrafficLogger\TrafficLoggerServiceProvider"
+```
+
+Migrate the database.
+You can change the database table that the logger users by update the table-name variable in the trafficlog.php config file. 
 
 ## Usage
 
