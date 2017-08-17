@@ -32,7 +32,7 @@ $ composer require :vendor/:package_name
 ```
 Publish config and migration to your app:
 ```
-php artisan vendor:publish --provider="AmyLashley\TrafficLogger\TrafficLoggerServiceProvider"
+php artisan vendor:publish --provider="AmyLashley\TrafficLogger\App\Providers\TrafficLoggerServiceProvider"
 ```
 
 Migrate the database.
@@ -40,6 +40,12 @@ You can change the database table that the logger users by update the table-name
 ```
 php artisan migrate
 ``` 
+
+Add Middleware to your `app\Http\Kernel.php` in the global middleware array:
+```
+\AmyLashley\TrafficLogger\App\Http\Middleware\LogRequest::class,
+```
+
 
 ## Usage
 
