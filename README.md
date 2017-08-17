@@ -10,25 +10,12 @@
 Laravel package that will log certain traffic data to a MySQL database. This package relies on the Eloquent ORM which 
 is included with Laravel.
 
-## Structure
-
-If any of the following are applicable to your project, then the directory structure should follow industry best practises by being named the following.
-
-```
-bin/        
-config/
-src/
-tests/
-vendor/
-```
-
-
 ## Install
 
 Via Composer
 
 ``` bash
-$ composer require :vendor/:package_name
+$ composer require AmyLashley\TrafficLogger
 ```
 Publish config and migration to your app:
 ```
@@ -49,10 +36,7 @@ Add Middleware to your `app\Http\Kernel.php` in the global middleware array:
 
 ## Usage
 
-``` php
-$skeleton = new League\Skeleton();
-echo $skeleton->echoPhrase('Hello, League!');
-```
+After installation, there is not much more you'll need to do. If you'd like to change the name of the database table that you're using, you can set that in trafficlog.php.
 
 You can view your traffic reports at /admin/traffic-logger/report
 
@@ -72,11 +56,11 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details
 
 ## Security
 
-If you discover any security related issues, please email :author_email instead of using the issue tracker.
+If you discover any security related issues, please email alashley@amherst.edu instead of using the issue tracker.
 
 ## Credits
 
-- [:author_name][link-author]
+- [Amy Lashley][link-author]
 - [All Contributors][link-contributors]
 
 ## License
@@ -95,5 +79,5 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [link-scrutinizer]: https://scrutinizer-ci.com/g/:vendor/:package_name/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/:vendor/:package_name
 [link-downloads]: https://packagist.org/packages/:vendor/:package_name
-[link-author]: https://github.com/:author_username
+[link-author]: https://github.com/amylashley
 [link-contributors]: ../../contributors
