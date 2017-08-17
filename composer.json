@@ -1,12 +1,13 @@
 {
-    "name": "AmyLashley/TrafficLogger",
+    "name": "amylashley/traffic-logger",
     "type": "library",
     "description": ":package_description",
     "keywords": [
-        "AmyLashley",
-        "TrafficLogger"
+        "amylashley",
+        "trafficlogger",
+        "laravel logger"
     ],
-    "homepage": "https://github.com/AmyLashley/TrafficLogger",
+    "homepage": "https://github.com/amylashley/traffic-logger",
     "license": "MIT",
     "authors": [
         {
