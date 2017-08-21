@@ -12,7 +12,7 @@ is included with Laravel.
 
 ## Install
 
-Via Composer
+######Via Composer
 
 ``` bash
 $ composer require AmyLashley\TrafficLogger
@@ -22,21 +22,26 @@ Publish config and migration to your app:
 php artisan vendor:publish --provider="AmyLashley\TrafficLogger\App\Providers\TrafficLoggerServiceProvider"
 ```
 
-Migrate the database.
+######Migrate the database.
 You can change the database table that the logger users by update the table-name variable in the trafficlog.php config file.
 ```
 php artisan migrate
 ``` 
 
-Add Middleware to your `app\Http\Kernel.php` in the global middleware array:
+######Add Middleware to your `app\Http\Kernel.php` in the global middleware array:
 ```
 \AmyLashley\TrafficLogger\App\Http\Middleware\LogRequest::class,
 ```
 
+##Configuration
+
+The following can be configured in trafficlog.php:
+
+-table-name: change the name of the database table that TrafficLogger will use. The default value is "log"
+-impersonator: If your system uses impersonation, and you'd like to capture the id of the impersonator, you'll need to add this functionality to your system: add a session variable and populate it when your system authenticates the user being impersonated. Then you can use this variable in TrafficLogger. The default value is "auth_imitator".
+
 
 ## Usage
-
-After installation, there is not much more you'll need to do. If you'd like to change the name of the database table that you're using, you can set that in trafficlog.php.
 
 You can view your traffic reports at /admin/traffic-logger/report
 

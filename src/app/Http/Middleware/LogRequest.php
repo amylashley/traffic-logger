@@ -17,7 +17,7 @@ class LogRequest
 		}
 		$data = ['ipaddress' => $request->getClientIp(),
 				'username' => $username,
-				'impersonator' => '',
+				'impersonator' => $request->session()->get(config('trafficlog.impersonator')),
 				'url' => $request->fullUrl(),
 				'referer' => $request->headers->get('referer'),
 				'user_agent' => $request->header('User-Agent'),

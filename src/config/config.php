@@ -16,6 +16,13 @@ return [
 		
 		'table-name' => 'log',
 		
+		/**
+		 * The impersonator value is the key for the session variable which holds
+		 * the id of the person performing the impersonation. This will need to be
+		 * setup separately in your application.
+		 */
+		'impersonator' => 'auth_imitator',
+		
 		'trafficlogger' => 'test', //remove after testing
 		
 ];

@@ -1,0 +1,69 @@
+<?php 
+namespace AmyLashley\TrafficLogger;
+
+use Tests\TestCase;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+use AmyLashley\TrafficLogger\App\Models\Traffic;
+use App\Models\User;
+
+class TrafficLoggerTest extends TestCase
+{
+	protected $traffic; 
+	
+	public function setUp()
+	{
+		$this->traffic = factory(AmyLashley\TrafficLogger\App\Models\Traffic::class)->create();
+	}
+	
+    public function testSomethingIsTrue()
+    {
+        $this->assertTrue(true);
+    }
+    
+    /**
+     * Ultimately we will need to be logged in with a user
+     * who has admin privilege
+     */
+    public function testReportsPage(){
+    	$response = $this->get('/admin/traffic-logger/report');
+    	
+    	$response->assertStatus(500);
+    	
+    }
+   
+    public function testLogContainsVisit(){
+    	//Given I have visited the home page of the site only once
+    	
+    	//When I fetch the logs
+    	//$traffic = Traffic::find();
+    	
+    	//Then I should see one record that accurately reflects this visit
+    }
+    
+    /**
+     * This should create a user of no particular role, have them
+     * visit the home page, and then make sure that their username
+     * has been correctly recorded in the Log table.
+     */
+    public function testLoggedInUserVisit(){
+    	//Given that I have a logged in user    	
+    	//$user = factory(User::class)->create();    	
+    	
+    	//When I visit a site page
+    	
+    	//$log = factory(AmyLashley\TrafficLogger\App\Models\Traffic::class)->create();
+    	
+    	//I should see one record that accurately records the username
+    	$logs = Traffic::getAll();
+    	
+    	$this->assertCount(1, $logs);
+    }
+    
+    public function testLogInsert(){
+    	
+    }
+    	
+    
+    
+}
