@@ -15,7 +15,7 @@ is included with Laravel.
 ######Via Composer
 
 ``` bash
-$ composer require AmyLashley\TrafficLogger
+$ composer require amylashley/traffic-logger
 ```
 Publish config and migration to your app:
 ```
