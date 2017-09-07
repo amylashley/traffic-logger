@@ -17,6 +17,11 @@ is included with Laravel.
 ``` bash
 $ composer require amylashley/traffic-logger
 ```
+Add ServiceProvider to app.php
+```
+AmyLashley\TrafficLogger\App\Providers\TrafficLoggerServiceProvider::class,
+```
+
 Publish config and migration to your app:
 ```
 php artisan vendor:publish --provider="AmyLashley\TrafficLogger\App\Providers\TrafficLoggerServiceProvider"
