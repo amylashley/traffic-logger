@@ -40,7 +40,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "AmyLashley\\TrafficLogger\\TrafficLoggerServiceProvider"
+                "AmyLashley\TrafficLogger\App\Providers\TrafficLoggerServiceProvider"
             ]
         }
     }
